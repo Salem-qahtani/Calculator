@@ -138,7 +138,9 @@ function endWithOperation() {
 }
 function operate(equation) {
   //create array contains all the numbers and operations
-  let eq = equation.toString().match(/(\d+\.?\d*|[+\-*%/])/g);
+  let eqStr = equation.toString();
+  if (eqStr.startsWith("-")) eqStr = "0" + eqStr;
+  let eq = eqStr.match(/(\d+\.?\d*|[+\-*%/])/g);
   //split into tqo arrays (numbers,operations)
   let Snumbers = eq.filter((element) => {
     return !isNaN(element);
