@@ -1,0 +1,171 @@
+body {
+  background-color: #f0f0f0;
+}
+@font-face {
+  font-family: "Digital-7";
+  src: url("./fonts/digital-7.ttf") format("truetype");
+}
+#header {
+  margin-top: 50px;
+  font-size: 3em;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(11, 10, 33);
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+#Calculator {
+  padding: 10px;
+  background-color: #ffffff;
+  height: 60vh;
+  width: 450px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+#display {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 100%;
+  height: 14vh;
+  margin-bottom: 10px;
+  background-color: #e8e8e8;
+  color: #222222;
+  cursor: default;
+  padding: 10px;
+  padding-bottom: 0px;
+  font-size: 7em;
+  text-align: right;
+  font-family: "Digital-7";
+  user-select: none;
+  overflow: auto;
+  overflow-y: hidden;
+}
+#buttons {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "del clear percent divide"
+    "seven eight nine multiply"
+    "four  five  six  subtract"
+    "one   two   three add"
+    "zero  dot   equal equal";
+}
+#buttons-container {
+  height: 100%;
+}
+[id="1"] {
+  grid-area: one;
+}
+[id="2"] {
+  grid-area: two;
+}
+[id="3"] {
+  grid-area: three;
+}
+[id="4"] {
+  grid-area: four;
+}
+[id="5"] {
+  grid-area: five;
+}
+[id="6"] {
+  grid-area: six;
+}
+[id="7"] {
+  grid-area: seven;
+}
+[id="8"] {
+  grid-area: eight;
+}
+[id="9"] {
+  grid-area: nine;
+}
+[id="0"] {
+  grid-area: zero;
+}
+[id="."] {
+  grid-area: dot;
+}
+[id="+"] {
+  grid-area: add;
+}
+[id="-"] {
+  grid-area: subtract;
+}
+[id="*"] {
+  grid-area: multiply;
+}
+[id="/"] {
+  grid-area: divide;
+}
+#percent {
+  grid-area: percent;
+}
+#clear {
+  grid-area: clear;
+}
+#equal {
+  grid-area: equal;
+}
+#delete {
+  grid-area: del;
+}
+
+.numbers {
+  font-size: 1.5em;
+  background-color: #ffffff;
+  border: 2px solid #d0d0d0;
+  border-radius: 4px;
+}
+.numbers:hover {
+  background-color: #ededed;
+}
+.numbers:active {
+  background-color: #ffffff;
+}
+[id="."] {
+  font-size: 1.5em;
+  background-color: #ffffff;
+  border: 2px solid #d0d0d0;
+  border-radius: 4px;
+}
+[id="."]:hover {
+  background-color: #ededed;
+}
+[id="."]:active {
+  background-color: #ffffff;
+}
+.operation {
+  font-size: 1.8em;
+  background-color: #a7cffa;
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+.operation:hover {
+  background-color: #74b7ff;
+}
+.operation:active {
+  background-color: #a7cffa;
+}
+.top-row {
+  font-size: 1.8em;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  background-color: #d4d4d4;
+  color: #333333;
+}
+.top-row:hover {
+  background-color: #bebebe;
+}
+.top-row:active {
+  background-color: #d4d4d4;
+}
