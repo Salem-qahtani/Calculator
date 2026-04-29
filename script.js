@@ -152,7 +152,11 @@ function operate(equation) {
     return isNaN(element);
   });
   //check if there are atleast two numbers to operate
-  if (numbers.length >= 2 && operations.length >= 1) {
+  if (
+    numbers.length >= 2 &&
+    operations.length >= 1 &&
+    numbers.length > operations.length
+  ) {
     while (operations.length > 0) {
       let result = operations.findIndex((element) => {
         return element == "*" || element == "%" || element == "/";
